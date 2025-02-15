@@ -1,0 +1,30 @@
+{
+  "name": "fundbox-server",
+  "version": "3.0.0",
+  "description": "Fundbox: Auto-Gen Ethereum Token System",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "mocha tests/*.js",
+    "deploy": "hardhat run scripts/deployContracts.js --network goerli",
+    "fund": "hardhat run scripts/fundLiquidity.js --network goerli"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.7",
+    "web3": "^1.8.0",
+    "ethers": "^5.7.0",
+    "cors": "^2.8.5",
+    "axios": "^1.2.0",
+    "body-parser": "^1.20.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "hardhat": "^2.14.0",
+    "solidity-coverage": "^0.8.0",
+    "nodemon": "^2.0.20"
+  }
+}
